@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <h1>Buy and Sell Crafts <a href="#" id="add-link">+</a></h1>
+
+    <div id="craft-list" class="row">
+        <div id="clm0" class="column"></div>
+        <div id="clm1" class="column"></div>
+        <div id="clm2" class="column"></div>
+        <div id="clm3" class="column"></div>
+    </div>
+    <div id="craft-list2" class="row">
+        <div id="clm0" class="column"></div>
+        <div id="clm1" class="column"></div>
+        <div id="clm2" class="column"></div>
+        <div id="clm3" class="column"></div>
+    </div>
+
+
+    <div class="w3-container">
+
+
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+
+                    <div id="div1">
+
+                        <div>
+                            <img id="popupImage" src="">
+                        </div>
+                        <div>
+                            <div id="addEditLinks">
+                                <a href="#" id="deleteLink">&#9249;</a>
+                                <a href="#" id="editLink">&#9998;</a>
+                            </div>
+                            <h2 id="title">Placeholder Title</h2>
+                            <p id="description"></p>
+                            <h3>Supplies:</h3>
+                            <div id="listDiv">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="dialog" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('dialog').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span>
+              <section id="dialog-details">
+                
+                <form id="add-craft-form" method="post" class="hidden">
+
+                    <input type="hidden" id="_id" name="_id">
+
+                    <p>
+                        <label for="name ">Craft Name:</label>
+                        <input type="text" id="name" name="name" required />
+                    </p>
+                    
+                    <p>
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" required />
+                    </p>
+        
+                    <section class="columns">
+                        <p id="img-prev-section">
+                            <img id="img-prev">
+                        </p>
+                        <p>
+                            <label for="img">Upload Image:</label>
+                            <input type="file" id="img" name="img" accept="image/*" />
+                        </p>
+                    </section>
+        
+                    <p id="supplies-p ">
+                        <label class="inline">Supplies:</label>
+                        <a href="#" id="add-supply">Add Supply</a>
+                        <section id="supply-boxes"></section>
+                    </p>
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
+                </form>
+
+                <section id="craft-details" class="hidden">
+
+                </section>
+            </section>
+          </div>
+        </div>
+      </div>   
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
