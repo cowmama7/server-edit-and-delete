@@ -43,7 +43,7 @@ app.post("/api/crafts", upload.single("img"), (req, res) => {
     };
     console.log(req.file.filename);
     if (req.file) {
-        craft.img = "images/" + req.file.filename;
+        craft.img =  req.file.filename;
     }
 
     crafts.push(craft);
@@ -63,11 +63,11 @@ app.put("/api/crafts/:id", upload.single("img"), (req, res) => {
     }
 
     craft.name = req.body.name;
-    craft.description - req.body.description;
+    craft.description = req.body.description;
     craft.supplies = req.body.supplies.split(",");
 
     if (req.file) {
-        craft.img = "images/" + req.file.filename;
+        craft.img = req.file.filename;
     }
 
     res.send(craft);
